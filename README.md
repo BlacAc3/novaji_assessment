@@ -55,7 +55,7 @@ base url = `127.0.0.1/api` or `localhost:8000/api`
   
   Example:
   ```bash
-  curl -X POST http://127.0.0.1:8000/register -H "Content-Type: application/json" -d '{
+  curl -X POST http://127.0.0.1:8000/api/register -H "Content-Type: application/json" -d '{
       "phone_number": "1234567890",
       "mobile_network": "MTN",
       "message": "Test registration",
@@ -67,14 +67,14 @@ base url = `127.0.0.1/api` or `localhost:8000/api`
 
   Example:
   ```bash
-  curl http://127.0.0.1:8000/status/ABC123XYZ4567890
+  curl http://127.0.0.1:8000/api/status/ABC123XYZ4567890
   ```
 
 - **PUT `/update/<ref_code>`**: Update the `message` field of an existing registration.
 
   Example:
   ```bash
-  curl -X PUT http://127.0.0.1:8000/update/ABC123XYZ4567890 -H "Content-Type: application/json" -d '{
+  curl -X PUT http://127.0.0.1:8000/api/update/ABC123XYZ4567890 -H "Content-Type: application/json" -d '{
       "message": "Updated registration message"
   }'
   ```
